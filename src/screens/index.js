@@ -119,16 +119,28 @@ export const startApp = (root) => {
 }
 
 
-export const push = (componentId) => {
+export const push = (componentId, nextComponent) => {
+    console.log(componentId, nextComponent);
     switch(componentId){
         case 'items' :
-            Navigation.push({
-                component: {
-                    name: 'navigation.push.items',
-                    options: {
-          
+        console.log('items!!!');
+            Navigation.push(componentId, {
+                stack:{
+                    component: {
+                        name: 'navigation.push.items',
+                        options: {
+                            statusBarStyle: 'light', largeTitle: true,
+                            statusBar: { visible: true }, largeTitle: { visible: true }.visible,
+                            topBar: {
+                                visible: true,
+                                title: {
+                                  text: 'items screen title'
+                                }
+                            }
+                        }
                     }
                 }
+                
             });
             return;
 
