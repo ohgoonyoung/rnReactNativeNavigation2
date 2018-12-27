@@ -1,0 +1,3 @@
+rootProject.name = 'rnReactNativeNavigation2'
+
+include ':app'
